@@ -1,0 +1,1024 @@
+!DOCTYPE html
+html lang=en class=scroll-smooth dark
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleAbdul Samad — Software, AI & Data Engineer  Portfoliotitle
+    !-- Tailwind CSS CDN --
+    script src=httpscdn.tailwindcss.comscript
+    script
+        tailwind.config = {
+            darkMode 'class',
+            theme {
+                extend {
+                    colors {
+                        brand {
+                            50 '#ecfdf5',
+                            100 '#d1fae5',
+                            500 '#10b981',
+                            600 '#059669',
+                            900 '#064e3b',
+                            950 '#022c22',
+                        }
+                    },
+                    animation {
+                        'pulse-slow' 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float' 'float 6s ease-in-out infinite',
+                    },
+                    keyframes {
+                        float {
+                            '0%, 100%' { transform 'translateY(0px)' },
+                            '50%' { transform 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    script
+    !-- FontAwesome for Icons --
+    link rel=stylesheet href=httpscdnjs.cloudflare.comajaxlibsfont-awesome6.4.0cssall.min.css
+    !-- Google Fonts --
+    link href=httpsfonts.googleapis.comcss2family=Plus+Jakarta+Sanswght@300;400;500;600;700;800&family=Fira+Codewght@400;500&display=swap rel=stylesheet
+    style
+        body {
+            font-family 'Plus Jakarta Sans', sans-serif;
+        }
+        code, .font-mono {
+            font-family 'Fira Code', monospace;
+        }
+        .glow-effect {
+            box-shadow 0 0 35px -5px rgba(16, 185, 129, 0.25);
+        }
+        .glow-effect-lg {
+            box-shadow 0 0 60px -10px rgba(16, 185, 129, 0.35);
+        }
+        .glass-card {
+            background rgba(17, 24, 39, 0.72);
+            backdrop-filter blur(12px);
+            border 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-cardhover {
+            border-color rgba(16, 185, 129, 0.4);
+        }
+         Custom Scrollbar 
+        -webkit-scrollbar {
+            width 8px;
+        }
+        -webkit-scrollbar-track {
+            background #030712;
+        }
+        -webkit-scrollbar-thumb {
+            background #1f2937;
+            border-radius 4px;
+        }
+        -webkit-scrollbar-thumbhover {
+            background #10b981;
+        }
+    style
+head
+body class=bg-slate-950 text-slate-100 antialiased selectionbg-emerald-500 selectiontext-black
+
+    !-- Header & Navigation --
+    header class=fixed top-0 left-0 right-0 z-50 bg-slate-95085 backdrop-blur-md border-b border-slate-80080 transition-all duration-300
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8 h-20 flex items-center justify-between
+            a href=#hero class=flex items-center space-x-3 group
+                div class=w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center font-bold text-slate-950 text-xl shadow-lg shadow-emerald-50020 group-hoverscale-105 transition-transform
+                    AS
+                div
+                div
+                    span class=font-bold text-lg tracking-tight text-white group-hovertext-emerald-400 transition-colorsAbdul Samadspan
+                    span class=block text-xs text-emerald-40085 font-mono tracking-widerSoftware, AI & Data Engineerspan
+                div
+            a
+
+            !-- Desktop Nav Links --
+            nav class=hidden mdflex items-center space-x-1 lgspace-x-2
+                a href=#about class=px-3 py-2 text-sm font-medium text-slate-300 hovertext-emerald-400 transition-colors rounded-lg hoverbg-slate-900Abouta
+                a href=#skills class=px-3 py-2 text-sm font-medium text-slate-300 hovertext-emerald-400 transition-colors rounded-lg hoverbg-slate-900Skillsa
+                a href=#experience class=px-3 py-2 text-sm font-medium text-slate-300 hovertext-emerald-400 transition-colors rounded-lg hoverbg-slate-900Experiencea
+                a href=#projects class=px-3 py-2 text-sm font-medium text-slate-300 hovertext-emerald-400 transition-colors rounded-lg hoverbg-slate-900Projectsa
+                a href=#certifications class=px-3 py-2 text-sm font-medium text-slate-300 hovertext-emerald-400 transition-colors rounded-lg hoverbg-slate-900Certificationsa
+                a href=#contact class=ml-4 px-5 py-2.5 text-sm font-semibold text-slate-950 bg-emerald-400 hoverbg-emerald-300 transition-all rounded-xl shadow-lg shadow-emerald-50020 hovershadow-emerald-50040 flex items-center gap-2
+                    i class=fa-solid fa-paper-plane text-xsi Let's Talk
+                a
+            nav
+
+            !-- Mobile Menu Button --
+            button id=mobile-menu-btn aria-label=Toggle Menu class=mdhidden p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hovertext-emerald-400 focusoutline-none
+                i class=fa-solid fa-bars text-lgi
+            button
+        div
+
+        !-- Mobile Nav Menu --
+        div id=mobile-menu class=hidden mdhidden bg-slate-90095 border-b border-slate-800 px-6 py-4 space-y-3 backdrop-blur-xl
+            a href=#about class=block py-2 text-base font-medium text-slate-300 hovertext-emerald-400Abouta
+            a href=#skills class=block py-2 text-base font-medium text-slate-300 hovertext-emerald-400Skillsa
+            a href=#experience class=block py-2 text-base font-medium text-slate-300 hovertext-emerald-400Experiencea
+            a href=#projects class=block py-2 text-base font-medium text-slate-300 hovertext-emerald-400Projectsa
+            a href=#certifications class=block py-2 text-base font-medium text-slate-300 hovertext-emerald-400Certificationsa
+            a href=#contact class=block text-center py-3 mt-2 text-sm font-semibold text-slate-950 bg-emerald-400 rounded-xlLet's Talka
+        div
+    header
+
+    !-- Hero Section --
+    section id=hero class=relative pt-32 pb-20 mdpt-44 mdpb-32 overflow-hidden
+        !-- Background Glows --
+        div class=absolute top-14 left-12 -translate-x-12 -translate-y-12 w-[650px] h-[420px] bg-emerald-60010 blur-[140px] rounded-full pointer-events-nonediv
+        div class=absolute top-10 right-10 w-72 h-72 bg-teal-50010 blur-[120px] rounded-full pointer-events-nonediv
+
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8 relative z-10
+            div class=grid grid-cols-1 lggrid-cols-12 gap-12 items-center
+                !-- Hero Content --
+                div class=lgcol-span-7 space-y-6 text-center lgtext-left
+                    div class=inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50010 border border-emerald-50020 text-emerald-400 text-xs mdtext-sm font-medium animate-pulse-slow
+                        span class=w-2 h-2 rounded-full bg-emerald-400span
+                        Software, AI & Data Engineer • Full-Stack Developer
+                    div
+
+                    h1 class=text-4xl smtext-6xl lgtext-7xl font-extrabold tracking-tight text-white leading-tight
+                        Engineering span class=text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500Intelligent Systemsspan & Impactful Leadership
+                    h1
+
+                    p class=text-slate-400 text-lg smtext-xl max-w-2xl mx-auto lgmx-0 font-normal leading-relaxed
+                        I'm strong class=text-slate-200Abdul Samadstrong, a BS Artificial Intelligence graduate from Iqra University based in Islamabad  Rawalpindi, blending enterprise full-stack development, data engineering, 3D medical AI research, and 3+ years of humanitarian leadership.
+                    p
+
+                    !-- Hero Actions --
+                    div class=flex flex-wrap items-center justify-center lgjustify-start gap-4 pt-4
+                        a href=#projects class=px-7 py-3.5 rounded-xl bg-emerald-500 hoverbg-emerald-400 text-slate-950 font-bold transition-all shadow-lg shadow-emerald-50025 flex items-center gap-2.5
+                            i class=fa-solid fa-codei Explore Projects
+                        a
+                        a href=#experience class=px-7 py-3.5 rounded-xl glass-card text-slate-200 hovertext-white font-semibold transition-all border border-slate-700 hoverborder-emerald-50050 flex items-center gap-2.5
+                            i class=fa-solid fa-briefcasei Experience & Leadership
+                        a
+                    div
+
+                    !-- Key Highlights  Stats --
+                    div class=grid grid-cols-2 smgrid-cols-4 gap-4 pt-8 border-t border-slate-80080 max-w-2xl mx-auto lgmx-0
+                        div
+                            div class=text-2xl smtext-3xl font-extrabold text-emerald-400 font-mono3+ Yrsdiv
+                            div class=text-xs text-slate-400 mt-1Leadership & Eventsdiv
+                        div
+                        div
+                            div class=text-2xl smtext-3xl font-extrabold text-emerald-400 font-mono98GB+div
+                            div class=text-xs text-slate-400 mt-1Medical AI Pipelinediv
+                        div
+                        div
+                            div class=text-2xl smtext-3xl font-extrabold text-emerald-400 font-mono3xdiv
+                            div class=text-xs text-slate-400 mt-1Azure & Oracle Certsdiv
+                        div
+                        div
+                            div class=text-2xl smtext-3xl font-extrabold text-emerald-400 font-monoFull-Stackdiv
+                            div class=text-xs text-slate-400 mt-1& Data Engineeringdiv
+                        div
+                    div
+                div
+
+                !-- Hero Visual Card  Terminal --
+                div class=lgcol-span-5
+                    div class=glass-card rounded-2xl p-6 glow-effect border border-slate-800 relative animate-float
+                        div class=flex items-center justify-between pb-4 border-b border-slate-800
+                            div class=flex items-center space-x-2
+                                div class=w-3 h-3 rounded-full bg-rose-500div
+                                div class=w-3 h-3 rounded-full bg-amber-500div
+                                div class=w-3 h-3 rounded-full bg-emerald-500div
+                            div
+                            span class=text-xs font-mono text-slate-400abdul-samad@ai-core~span
+                        div
+                        div class=py-4 font-mono text-xs smtext-sm space-y-2.5 text-slate-300
+                            p class=text-emerald-400$ whoamip
+                            p class=text-slate-200&gt; Abdul Samad — Software, AI &amp; Data Engineerp
+                            p class=text-emerald-400 mt-3$ education --degreep
+                            p class=text-slate-300&gt; BS Artificial Intelligence, Iqra University (2022–2026)p
+                            p class=text-emerald-400 mt-3$ core_stack --activep
+                            p class=text-slate-400['Python', 'PyTorch', 'Laravel', 'Vue.js', 'Next.js', 'SQL', 'Azure AZ-104']p
+                            p class=text-emerald-400 mt-3$ current_rolesp
+                            p class=text-slate-300&gt; Comtanix (Engineer) • SRDS (Data Head) • YEC  Helping Hand USA (3 Yrs)p
+                        div
+                        div class=mt-4 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400
+                            spanIslamabad  Rawalpindi, PKspan
+                            span class=text-emerald-400 flex items-center gap-1.5i class=fa-solid fa-circle text-[8px] animate-pingi Onlinespan
+                        div
+                    div
+                div
+            div
+        div
+    section
+
+    !-- About & Education Section --
+    section id=about class=py-20 bg-slate-90040 border-t border-slate-80060
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8
+            div class=text-center max-w-3xl mx-auto mb-16
+                span class=text-emerald-400 font-mono text-sm tracking-wider uppercaseBackground & Educationspan
+                h2 class=text-3xl smtext-4xl font-bold text-white mt-2About Meh2
+                div class=w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-fulldiv
+            div
+
+            div class=grid grid-cols-1 lggrid-cols-12 gap-8 items-stretch
+                !-- Profile & Education Card --
+                div class=lgcol-span-5 flex flex-col justify-between
+                    div class=glass-card rounded-2xl p-6 smp-7 relative overflow-hidden group h-full flex flex-col justify-between
+                        div class=absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-50010 rounded-full blur-2xl group-hoverbg-emerald-50025 transition-alldiv
+                        div class=space-y-4 relative z-10
+                            h3 class=text-xl font-bold text-white flex items-center gap-2
+                                i class=fa-solid fa-user-astronaut text-emerald-400i Engineering & Leadership Profile
+                            h3
+                            p class=text-slate-300 text-sm leading-relaxed
+                                I bridge deep learning, enterprise web development, and high-stakes operational leadership. From architecting full-stack client portals at strong class=text-whiteComtanixstrong and validating nationwide educational data at strong class=text-whiteZakat Foundationstrong, to leading 3 years of large-scale youth and humanitarian events with strong class=text-whiteYEC  Helping Hand USAstrong, I build systems and teams that deliver measurable impact.
+                            p
+
+                            !-- Education Highlight Box --
+                            div class=p-4 rounded-xl bg-slate-90090 border border-slate-800 mt-4
+                                div class=flex items-center justify-between mb-1
+                                    span class=text-xs font-mono text-emerald-400 uppercase tracking-widerEducationspan
+                                    span class=text-xs font-mono text-slate-400Jan 2022 – Jan 2026span
+                                div
+                                h4 class=font-bold text-white text-baseBS in Artificial Intelligenceh4
+                                p class=text-slate-300 text-xs mt-0.5Iqra University — Islamabad, Pakistanp
+                                div class=mt-2 inline-block px-2.5 py-0.5 rounded bg-emerald-50010 border border-emerald-50020 text-emerald-400 font-mono text-xs
+                                    CGPA 3.03  4.0
+                                div
+                            div
+                        div
+
+                        div class=pt-5 mt-5 border-t border-slate-800 grid grid-cols-2 gap-3 text-xs font-mono text-slate-300 relative z-10
+                            divstrong class=text-emerald-400Basestrong Islamabad  Rawalpindidiv
+                            divstrong class=text-emerald-400Rolestrong Software, AI & Data Engdiv
+                            divstrong class=text-emerald-400Leadershipstrong 3+ Years Event Headdiv
+                            divstrong class=text-emerald-400Languagesstrong English, Urdudiv
+                        div
+                    div
+                div
+
+                !-- 4 Pillars Grid --
+                div class=lgcol-span-7 grid grid-cols-1 smgrid-cols-2 gap-4
+                    div class=glass-card rounded-xl p-6 hoverborder-emerald-50040 transition-all
+                        div class=w-11 h-11 rounded-lg bg-emerald-50010 text-emerald-400 flex items-center justify-center text-lg mb-4
+                            i class=fa-solid fa-braini
+                        div
+                        h4 class=font-bold text-white mb-23D Medical AI & Machine Learningh4
+                        p class=text-slate-400 text-xs leading-relaxedBuilt a 98GB+ NSCLC Radiogenomics 3D CTgenomic pipeline (nnU-Net, ViT, ResNet-18) achieving 0.861 Test AUC, alongside fraud classification engines using XGBoost & SMOTE.p
+                    div
+
+                    div class=glass-card rounded-xl p-6 hoverborder-emerald-50040 transition-all
+                        div class=w-11 h-11 rounded-lg bg-emerald-50010 text-emerald-400 flex items-center justify-center text-lg mb-4
+                            i class=fa-solid fa-laptop-codei
+                        div
+                        h4 class=font-bold text-white mb-2Enterprise Full-Stack Systemsh4
+                        p class=text-slate-400 text-xs leading-relaxedEngineering production features for vCloudTech client portals using Laravel, PHP, Vue.js, Inertia.js, and SQL, plus Next.js & Supabase administration platforms.p
+                    div
+
+                    div class=glass-card rounded-xl p-6 hoverborder-emerald-50040 transition-all
+                        div class=w-11 h-11 rounded-lg bg-emerald-50010 text-emerald-400 flex items-center justify-center text-lg mb-4
+                            i class=fa-solid fa-databasei
+                        div
+                        h4 class=font-bold text-white mb-2Data Engineering & Analyticsh4
+                        p class=text-slate-400 text-xs leading-relaxedCleaned, validated, and structured large-scale Out-of-School Children (OOSC) datasets at Zakat Foundation and automated donor pipelines at SRDS.p
+                    div
+
+                    div class=glass-card rounded-xl p-6 hoverborder-emerald-50040 transition-all
+                        div class=w-11 h-11 rounded-lg bg-emerald-50010 text-emerald-400 flex items-center justify-center text-lg mb-4
+                            i class=fa-solid fa-people-groupi
+                        div
+                        h4 class=font-bold text-white mb-2Event Management & Leadershiph4
+                        p class=text-slate-400 text-xs leading-relaxed3 years as Event Management Head & Volunteer at YEC  Helping Hand USA, directing cross-functional teams, humanitarian relief drives, and community outreach.p
+                    div
+                div
+            div
+        div
+    section
+
+    !-- Core Competencies Section --
+    section id=skills class=py-20 border-t border-slate-80060
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8
+            div class=text-center max-w-3xl mx-auto mb-16
+                span class=text-emerald-400 font-mono text-sm tracking-wider uppercaseTechnical & Leadership Arsenalspan
+                h2 class=text-3xl smtext-4xl font-bold text-white mt-2Core Competenciesh2
+                div class=w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-fulldiv
+            div
+
+            div class=grid grid-cols-1 mdgrid-cols-3 gap-8
+                !-- AI & Data Science --
+                div class=glass-card rounded-2xl p-6
+                    div class=flex items-center gap-3 mb-6
+                        div class=w-12 h-12 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center text-xl
+                            i class=fa-solid fa-network-wiredi
+                        div
+                        div
+                            h3 class=font-bold text-white text-lgAI & Data Scienceh3
+                            span class=text-xs text-slate-400 font-monoModels, Vision & Analyticsspan
+                        div
+                    div
+                    div class=flex flex-wrap gap-2
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Pythonspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400PyTorchspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400TensorFlowspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Scikit-learnspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400XGBoostspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400CNNs  ViT  nnU-Netspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Data Validationspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400SQLspan
+                    div
+                div
+
+                !-- Full-Stack & Cloud --
+                div class=glass-card rounded-2xl p-6
+                    div class=flex items-center gap-3 mb-6
+                        div class=w-12 h-12 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center text-xl
+                            i class=fa-solid fa-layer-groupi
+                        div
+                        div
+                            h3 class=font-bold text-white text-lgFull-Stack & Cloudh3
+                            span class=text-xs text-slate-400 font-monoEnterprise Web & DevOpsspan
+                        div
+                    div
+                    div class=flex flex-wrap gap-2
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400PHP & Laravelspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Vue.js & Inertia.jsspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Piniaspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Next.jsspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400FastAPI & REST APIsspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Docker & Gitspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Microsoft Azure (AZ-104)span
+                    div
+                div
+
+                !-- Leadership & Operations --
+                div class=glass-card rounded-2xl p-6
+                    div class=flex items-center gap-3 mb-6
+                        div class=w-12 h-12 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center text-xl
+                            i class=fa-solid fa-awardi
+                        div
+                        div
+                            h3 class=font-bold text-white text-lgLeadership & Operationsh3
+                            span class=text-xs text-slate-400 font-monoManagement & Executionspan
+                        div
+                    div
+                    div class=flex flex-wrap gap-2
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Event Management (3+ Yrs)span
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Team Leadershipspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Stakeholder Reportingspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Volunteer Coordinationspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Crisis & Pressure Handlingspan
+                        span class=px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400Humanitarian Logisticsspan
+                    div
+                div
+            div
+        div
+    section
+
+    !-- Professional Experience & Leadership Timeline --
+    section id=experience class=py-20 bg-slate-90040 border-t border-slate-80060
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8
+            div class=text-center max-w-3xl mx-auto mb-16
+                span class=text-emerald-400 font-mono text-sm tracking-wider uppercaseCareer & Community Impactspan
+                h2 class=text-3xl smtext-4xl font-bold text-white mt-2Professional Experience & Leadershiph2
+                div class=w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-fulldiv
+            div
+
+            div class=max-w-4xl mx-auto space-y-8
+                !-- 1. Comtanix Experience --
+                div class=glass-card rounded-2xl p-6 smp-8 relative border-l-4 border-l-emerald-500
+                    div class=flex flex-col smflex-row smitems-start justify-between gap-2 mb-4
+                        div
+                            h3 class=text-xl font-bold text-whiteSoftware, AI & Data Engineerh3
+                            div class=flex flex-wrap items-center gap-2 mt-1
+                                span class=text-emerald-400 font-semiboldComtanixspan
+                                span class=text-slate-500•span
+                                span class=text-slate-400 text-xs font-monoRawalpindi, Pakistanspan
+                            div
+                            p class=text-xs text-slate-400 mt-1 font-monoPromoted following Data Analyst &amp; Full-Stack Web Developer Internship (May 2026 – Sep 2026)p
+                        div
+                        span class=inline-block px-3.5 py-1 rounded-full bg-emerald-50010 border border-emerald-50020 text-emerald-400 font-mono text-xs w-fit shrink-0Sep 2026 – Presentspan
+                    div
+                    ul class=space-y-2.5 text-slate-300 text-sm
+                        li class=flex items-start gap-2.5
+                            i class=fa-solid fa-chevron-right text-emerald-400 text-xs mt-1.5i
+                            spanArchitecting data engineering pipelines, REST APIs, and enterprise backend integrations for scalable production applications.span
+                        li
+                        li class=flex items-start gap-2.5
+                            i class=fa-solid fa-chevron-right text-emerald-400 text-xs mt-1.5i
+                            spanEngineering feature updates for enterprise vCloudTech client portals (code class=text-emerald-300 text-xssalesportal_latestcode and code class=text-emerald-300 text-xsvcloud_clientcode), refactoring layout tables, implementing automated lead scoring modules, and constructing dual-country address forms using strongLaravel, PHP, Vue.js, and SQLstrong.span
+                        li
+                    ul
+                div
+
+                !-- 2. Zakat Foundation Internship --
+                div class=glass-card rounded-2xl p-6 smp-8 relative border-l-4 border-l-teal-400
+                    div class=flex flex-col smflex-row smitems-start justify-between gap-2 mb-4
+                        div
+                            h3 class=text-xl font-bold text-whiteData Analyst Intern (OOSC Project)h3
+                            div class=flex flex-wrap items-center gap-2 mt-1
+                                span class=text-teal-400 font-semiboldZakat Foundationspan
+                                span class=text-slate-500•span
+                                span class=text-slate-400 text-xs font-monoIslamabad, Pakistanspan
+                            div
+                        div
+                        span class=inline-block px-3.5 py-1 rounded-full bg-teal-50010 border border-teal-50020 text-teal-400 font-mono text-xs w-fit shrink-03 Months Internshipspan
+                    div
+                    ul class=space-y-2.5 text-slate-300 text-sm
+                        li class=flex items-start gap-2.5
+                            i class=fa-solid fa-chevron-right text-teal-400 text-xs mt-1.5i
+                            spanWorked as a Data Analyst Intern on the flagship strongOut-of-School Children (OOSC)strong initiative, driving data-backed educational intervention strategies.span
+                        li
+                        li class=flex items-start gap-2.5
+                            i class=fa-solid fa-chevron-right text-teal-400 text-xs mt-1.5i
+                            spanCollected, cleaned, validated, and organized large-scale educational datasets to ensure high accuracy across stakeholder records and generated analytical reports to guide leadership decision-making.span
+                        li
+                    ul
+                div
+
+                !-- 3. YEC  Helping Hand USA (3 Years Leadership) --
+                div class=glass-card rounded-2xl p-6 smp-8 relative border-l-4 border-l-amber-400
+                    div class=flex flex-col smflex-row smitems-start justify-between gap-2 mb-4
+                        div
+                            h3 class=text-xl font-bold text-whiteEvent Management Head &amp; Volunteerh3
+                            div class=flex flex-wrap items-center gap-2 mt-1
+                                span class=text-amber-400 font-semiboldYEC (Youth Empowerment Club)  Helping Hand USAspan
+                                span class=text-slate-500•span
+                                span class=text-slate-400 text-xs font-monoLeadership &amp; Humanitarian Operationsspan
+                            div
+                        div
+                        span class=inline-block px-3.5 py-1 rounded-full bg-amber-50010 border border-amber-50020 text-amber-400 font-mono text-xs w-fit shrink-03 Years Tenurespan
+                    div
+                    ul class=space-y-2.5 text-slate-300 text-sm
+                        li class=flex items-start gap-2.5
+                            i class=fa-solid fa-chevron-right text-amber-400 text-xs mt-1.5i
+                            spanLed event planning, end-to-end logistics, cross-functional volunteer teams, and community outreach initiatives over a dedicated strong3-year tenurestrong.span
+                        li
+                        li class=flex items-start gap-2.5
+                            i class=fa-solid fa-chevron-right text-amber-400 text-xs mt-1.5i
+                            spanOrganized large-scale youth empowerment events, humanitarian relief drives, and community welfare campaigns with seamless operational execution under high-pressure timelines.span
+                        li
+                    ul
+                div
+
+                !-- 4. SARIOON Red Drop Society (SRDS) --
+                div class=glass-card rounded-2xl p-6 smp-8 relative border-l-4 border-l-rose-400
+                    div class=flex flex-col smflex-row smitems-start justify-between gap-2 mb-4
+                        div
+                            h3 class=text-xl font-bold text-whiteData Management Team Leader (Head)h3
+                            div class=flex flex-wrap items-center gap-2 mt-1
+                                span class=text-rose-400 font-semiboldSARIOON Red Drop Society (SRDS)span
+                                span class=text-slate-500•span
+                                span class=text-slate-400 text-xs font-monoData Operations &amp; Platform Engineeringspan
+                            div
+                        div
+                        span class=inline-block px-3.5 py-1 rounded-full bg-rose-50010 border border-rose-50020 text-rose-400 font-mono text-xs w-fit shrink-0Leadership &amp; Techspan
+                    div
+                    ul class=space-y-2.5 text-slate-300 text-sm
+                        li class=flex items-start gap-2.5
+                            i class=fa-solid fa-chevron-right text-rose-400 text-xs mt-1.5i
+                            spanLeading data operations and building automated donor and volunteer onboarding workflows to accelerate emergency blood donation response.span
+                        li
+                        li class=flex items-start gap-2.5
+                            i class=fa-solid fa-chevron-right text-rose-400 text-xs mt-1.5i
+                            spanArchitected and deployed the code class=text-rose-300 text-xssrds-dashboardcode administration platform using strongNext.js, Prisma, Supabase, and Tailwind CSSstrong.span
+                        li
+                    ul
+                div
+            div
+        div
+    section
+
+    !-- Projects & Achievements Section with Category Filtering --
+    section id=projects class=py-20 border-t border-slate-80060
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8
+            div class=text-center max-w-3xl mx-auto mb-10
+                span class=text-emerald-400 font-mono text-sm tracking-wider uppercasePortfolio & Milestonesspan
+                h2 class=text-3xl smtext-4xl font-bold text-white mt-2Projects &amp; Life Achievementsh2
+                div class=w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-fulldiv
+                p class=text-slate-400 text-sm mt-4Filter by domain or click any card to inspect technical architecture, datasets, and operational outcomes.p
+            div
+
+            !-- Filter Buttons --
+            div id=filter-buttons class=flex flex-wrap items-center justify-center gap-2.5 mb-12
+                button onclick=filterProjects('all', this) class=filter-btn active px-5 py-2.5 rounded-xl text-xs smtext-sm font-semibold bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-50020 transition-all
+                    All Projects (6)
+                button
+                button onclick=filterProjects('ai', this) class=filter-btn px-5 py-2.5 rounded-xl text-xs smtext-sm font-semibold glass-card text-slate-300 hovertext-white transition-all
+                    AI &amp; ML
+                button
+                button onclick=filterProjects('fullstack', this) class=filter-btn px-5 py-2.5 rounded-xl text-xs smtext-sm font-semibold glass-card text-slate-300 hovertext-white transition-all
+                    Full-Stack Web
+                button
+                button onclick=filterProjects('data-leadership', this) class=filter-btn px-5 py-2.5 rounded-xl text-xs smtext-sm font-semibold glass-card text-slate-300 hovertext-white transition-all
+                    Data &amp; Leadership
+                button
+            div
+
+            !-- Project Grid --
+            div id=projects-grid class=grid grid-cols-1 mdgrid-cols-2 lggrid-cols-3 gap-7
+                
+                !-- Project 1 3D Medical AI Pipeline --
+                div data-category=ai class=project-card glass-card rounded-2xl p-6 smp-7 flex flex-col justify-between group hoverborder-emerald-50050 transition-all cursor-pointer onclick=openModal('medical')
+                    div
+                        div class=flex items-center justify-between mb-4
+                            span class=px-3 py-1 rounded-full bg-emerald-50010 text-emerald-400 font-mono text-xsAI &amp; ML • FYPspan
+                            div class=w-10 h-10 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center group-hoverscale-110 transition-transform
+                                i class=fa-solid fa-heart-pulsei
+                            div
+                        div
+                        h3 class=text-xl font-bold text-white mb-3 group-hovertext-emerald-400 transition-colors3D Medical AI Pipelineh3
+                        p class=text-slate-300 text-sm leading-relaxed mb-5
+                            98GB NSCLC Radiogenomics CT &amp; genomic multi-modal pipeline achieving strong0.861 Test AUCstrong and strong81.8% accuracystrong.
+                        p
+                        div class=flex flex-wrap gap-1.5 mb-6
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400PyTorchspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400nnU-Netspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400ViTspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400ResNet-18span
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400FastAPIspan
+                        div
+                    div
+                    div class=pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400
+                        spanInspect Architecture &amp; Metricsspan
+                        i class=fa-solid fa-arrow-right group-hovertranslate-x-1 transition-transformi
+                    div
+                div
+
+                !-- Project 2 Fraudulent Payment Detection --
+                div data-category=ai class=project-card glass-card rounded-2xl p-6 smp-7 flex flex-col justify-between group hoverborder-emerald-50050 transition-all cursor-pointer onclick=openModal('fraud')
+                    div
+                        div class=flex items-center justify-between mb-4
+                            span class=px-3 py-1 rounded-full bg-emerald-50010 text-emerald-400 font-mono text-xsAI &amp; ML • Fintechspan
+                            div class=w-10 h-10 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center group-hoverscale-110 transition-transform
+                                i class=fa-solid fa-shield-halvedi
+                            div
+                        div
+                        h3 class=text-xl font-bold text-white mb-3 group-hovertext-emerald-400 transition-colorsFraudulent Payment Detection Systemh3
+                        p class=text-slate-300 text-sm leading-relaxed mb-5
+                            Tackled severe strong0.17% class imbalancestrong on European transactional data using XGBoost and SMOTEADASYN to maximize Precision-Recall AUC.
+                        p
+                        div class=flex flex-wrap gap-1.5 mb-6
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Pythonspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400XGBoostspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Scikit-learnspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400SMOTE  ADASYNspan
+                        div
+                    div
+                    div class=pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400
+                        spanInspect Architecture &amp; Metricsspan
+                        i class=fa-solid fa-arrow-right group-hovertranslate-x-1 transition-transformi
+                    div
+                div
+
+                !-- Project 3 SRDS Administration Dashboard --
+                div data-category=fullstack data-leadership class=project-card glass-card rounded-2xl p-6 smp-7 flex flex-col justify-between group hoverborder-emerald-50050 transition-all cursor-pointer onclick=openModal('srds')
+                    div
+                        div class=flex items-center justify-between mb-4
+                            span class=px-3 py-1 rounded-full bg-teal-50010 text-teal-400 font-mono text-xsFull-Stack • Vercel Livespan
+                            div class=w-10 h-10 rounded-xl bg-teal-50010 text-teal-400 flex items-center justify-center group-hoverscale-110 transition-transform
+                                i class=fa-solid fa-dropleti
+                            div
+                        div
+                        h3 class=text-xl font-bold text-white mb-3 group-hovertext-emerald-400 transition-colorsSRDS Administration Dashboardh3
+                        p class=text-slate-300 text-sm leading-relaxed mb-5
+                            Live donor registry, automated onboarding workflows, and blood donation tracking platform (code class=text-emerald-300 text-xssrds-dashboardcode) deployed on Vercel.
+                        p
+                        div class=flex flex-wrap gap-1.5 mb-6
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Next.jsspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Prismaspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Supabasespan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Tailwind CSSspan
+                        div
+                    div
+                    div class=pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400
+                        spanInspect Architecture &amp; Metricsspan
+                        i class=fa-solid fa-arrow-right group-hovertranslate-x-1 transition-transformi
+                    div
+                div
+
+                !-- Project 4 Enterprise Client Portals (vCloudTech  Comtanix) --
+                div data-category=fullstack class=project-card glass-card rounded-2xl p-6 smp-7 flex flex-col justify-between group hoverborder-emerald-50050 transition-all cursor-pointer onclick=openModal('vcloud')
+                    div
+                        div class=flex items-center justify-between mb-4
+                            span class=px-3 py-1 rounded-full bg-teal-50010 text-teal-400 font-mono text-xsFull-Stack • Enterprisespan
+                            div class=w-10 h-10 rounded-xl bg-teal-50010 text-teal-400 flex items-center justify-center group-hoverscale-110 transition-transform
+                                i class=fa-solid fa-globei
+                            div
+                        div
+                        h3 class=text-xl font-bold text-white mb-3 group-hovertext-emerald-400 transition-colorsEnterprise Client Portals (vCloudTech)h3
+                        p class=text-slate-300 text-sm leading-relaxed mb-5
+                            Engineered automated lead scoring modules, refactored layout tables, and dual-country address workflows across code class=text-emerald-300 text-xssalesportal_latestcode &amp; code class=text-emerald-300 text-xsvcloud_clientcode.
+                        p
+                        div class=flex flex-wrap gap-1.5 mb-6
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Laravelspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400PHPspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Vue.jsspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Inertia.jsspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400SQLspan
+                        div
+                    div
+                    div class=pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400
+                        spanInspect Architecture &amp; Metricsspan
+                        i class=fa-solid fa-arrow-right group-hovertranslate-x-1 transition-transformi
+                    div
+                div
+
+                !-- Project 5 OOSC Data Analytics Initiative (Zakat Foundation) --
+                div data-category=data-leadership class=project-card glass-card rounded-2xl p-6 smp-7 flex flex-col justify-between group hoverborder-emerald-50050 transition-all cursor-pointer onclick=openModal('oosc')
+                    div
+                        div class=flex items-center justify-between mb-4
+                            span class=px-3 py-1 rounded-full bg-amber-50010 text-amber-400 font-mono text-xsData Analytics • NGOspan
+                            div class=w-10 h-10 rounded-xl bg-amber-50010 text-amber-400 flex items-center justify-center group-hoverscale-110 transition-transform
+                                i class=fa-solid fa-graduation-capi
+                            div
+                        div
+                        h3 class=text-xl font-bold text-white mb-3 group-hovertext-emerald-400 transition-colorsOut-of-School Children (OOSC) Analyticsh3
+                        p class=text-slate-300 text-sm leading-relaxed mb-5
+                            Large-scale educational data cleaning, validation, and stakeholder impact reporting at strongZakat Foundationstrong to guide student enrollment initiatives.
+                        p
+                        div class=flex flex-wrap gap-1.5 mb-6
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Data Cleaningspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Validationspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Stakeholder Reportsspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Analyticsspan
+                        div
+                    div
+                    div class=pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400
+                        spanInspect Impact &amp; Outcomesspan
+                        i class=fa-solid fa-arrow-right group-hovertranslate-x-1 transition-transformi
+                    div
+                div
+
+                !-- Project 6 3 Years Community Leadership & Humanitarian Operations --
+                div data-category=data-leadership class=project-card glass-card rounded-2xl p-6 smp-7 flex flex-col justify-between group hoverborder-emerald-50050 transition-all cursor-pointer onclick=openModal('yec')
+                    div
+                        div class=flex items-center justify-between mb-4
+                            span class=px-3 py-1 rounded-full bg-amber-50010 text-amber-400 font-mono text-xsLeadership • 3 Yearsspan
+                            div class=w-10 h-10 rounded-xl bg-amber-50010 text-amber-400 flex items-center justify-center group-hoverscale-110 transition-transform
+                                i class=fa-solid fa-hand-holding-hearti
+                            div
+                        div
+                        h3 class=text-xl font-bold text-white mb-3 group-hovertext-emerald-400 transition-colors3 Yrs Humanitarian &amp; Event Leadershiph3
+                        p class=text-slate-300 text-sm leading-relaxed mb-5
+                            Spearheaded major youth empowerment events, volunteer coordination, and community relief drives as Event Management Head at strongYEC  Helping Hand USAstrong.
+                        p
+                        div class=flex flex-wrap gap-1.5 mb-6
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Event Managementspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Team Leadershipspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Relief Logisticsspan
+                            span class=px-2.5 py-1 rounded bg-slate-800 text-xs font-mono text-emerald-400Outreachspan
+                        div
+                    div
+                    div class=pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400
+                        spanInspect Impact &amp; Outcomesspan
+                        i class=fa-solid fa-arrow-right group-hovertranslate-x-1 transition-transformi
+                    div
+                div
+
+            div
+        div
+    section
+
+    !-- Certifications Section --
+    section id=certifications class=py-20 bg-slate-90040 border-t border-slate-80060
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8
+            div class=text-center max-w-3xl mx-auto mb-16
+                span class=text-emerald-400 font-mono text-sm tracking-wider uppercaseVerified Credentialsspan
+                h2 class=text-3xl smtext-4xl font-bold text-white mt-2Certifications &amp; Accreditationsh2
+                div class=w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-fulldiv
+            div
+
+            div class=grid grid-cols-1 mdgrid-cols-3 gap-6 max-w-6xl mx-auto
+                !-- Cert 1 Azure AZ-104 --
+                div class=glass-card rounded-2xl p-6 flex flex-col justify-between
+                    div class=flex items-start gap-4
+                        div class=w-12 h-12 rounded-xl bg-blue-50010 text-blue-400 flex items-center justify-center text-xl shrink-0
+                            i class=fa-brands fa-microsofti
+                        div
+                        div
+                            span class=text-xs text-blue-400 font-monoMicrosoft Certifiedspan
+                            h3 class=text-lg font-bold text-white mt-1Azure Administrator Associate (AZ-104)h3
+                            p class=text-slate-400 text-xs mt-2 leading-relaxed
+                                Validated expertise in managing Azure cloud subscriptions, storage accounts, virtual networks, compute infrastructure, and identity governance.
+                            p
+                        div
+                    div
+                div
+
+                !-- Cert 2 Azure AI Fundamentals --
+                div class=glass-card rounded-2xl p-6 flex flex-col justify-between
+                    div class=flex items-start gap-4
+                        div class=w-12 h-12 rounded-xl bg-sky-50010 text-sky-400 flex items-center justify-center text-xl shrink-0
+                            i class=fa-solid fa-roboti
+                        div
+                        div
+                            span class=text-xs text-sky-400 font-monoMicrosoft Certifiedspan
+                            h3 class=text-lg font-bold text-white mt-1Azure AI Fundamentals (AI-900)h3
+                            p class=text-slate-400 text-xs mt-2 leading-relaxed
+                                Certified proficiency in machine learning workloads, computer vision, natural language processing, and generative AI services on Azure.
+                            p
+                        div
+                    div
+                div
+
+                !-- Cert 3 Oracle Agentic AI --
+                div class=glass-card rounded-2xl p-6 flex flex-col justify-between
+                    div class=flex items-start gap-4
+                        div class=w-12 h-12 rounded-xl bg-rose-50010 text-rose-400 flex items-center justify-center text-xl shrink-0
+                            i class=fa-solid fa-braini
+                        div
+                        div
+                            span class=text-xs text-rose-400 font-monoOracle Certifiedspan
+                            h3 class=text-lg font-bold text-white mt-1Foundations Associate – Agentic AIh3
+                            p class=text-slate-400 text-xs mt-2 leading-relaxed
+                                Accredited in architecting autonomous agentic AI workflows, multi-step reasoning pipelines, and LLM-driven enterprise automation.
+                            p
+                        div
+                    div
+                div
+            div
+        div
+    section
+
+    !-- Contact Section --
+    section id=contact class=py-20 border-t border-slate-80060 relative overflow-hidden
+        div class=absolute bottom-0 right-0 w-96 h-96 bg-emerald-60010 blur-[150px] rounded-full pointer-events-nonediv
+
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8 relative z-10
+            div class=text-center max-w-3xl mx-auto mb-16
+                span class=text-emerald-400 font-mono text-sm tracking-wider uppercaseGet In Touchspan
+                h2 class=text-3xl smtext-4xl font-bold text-white mt-2Let's Build Something Impactfulh2
+                div class=w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-fulldiv
+                p class=text-slate-400 text-sm mt-4Available for Software, AI &amp; Data Engineering roles, full-stack consulting, and collaborative initiatives.p
+            div
+
+            div class=grid grid-cols-1 lggrid-cols-12 gap-10 max-w-5xl mx-auto
+                !-- Contact Info Cards --
+                div class=lgcol-span-5 space-y-4
+                    div class=glass-card rounded-2xl p-5 flex items-center gap-4
+                        div class=w-11 h-11 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center text-lg shrink-0
+                            i class=fa-regular fa-envelopei
+                        div
+                        div class=min-w-0
+                            span class=text-xs text-slate-400 font-monoEmailspan
+                            a href=mailtosamadsami566@gmail.com class=block font-semibold text-white hovertext-emerald-400 transition-colors text-sm truncatesamadsami566@gmail.coma
+                        div
+                    div
+
+                    div class=glass-card rounded-2xl p-5 flex items-center gap-4
+                        div class=w-11 h-11 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center text-lg shrink-0
+                            i class=fa-solid fa-phonei
+                        div
+                        div
+                            span class=text-xs text-slate-400 font-monoPhone  WhatsAppspan
+                            a href=tel+923149940582 class=block font-semibold text-white hovertext-emerald-400 transition-colors text-sm+92 314 9940582a
+                        div
+                    div
+
+                    div class=glass-card rounded-2xl p-5 flex items-center gap-4
+                        div class=w-11 h-11 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center text-lg shrink-0
+                            i class=fa-brands fa-linkedin-ini
+                        div
+                        div class=min-w-0
+                            span class=text-xs text-slate-400 font-monoLinkedInspan
+                            a href=httpslinkedin.cominabdul-samad-425522306 target=_blank rel=noopener noreferrer class=block font-semibold text-white hovertext-emerald-400 transition-colors text-sm truncatelinkedin.cominabdul-samad-425522306a
+                        div
+                    div
+
+                    div class=glass-card rounded-2xl p-5 flex items-center gap-4
+                        div class=w-11 h-11 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center text-lg shrink-0
+                            i class=fa-brands fa-githubi
+                        div
+                        div class=min-w-0
+                            span class=text-xs text-slate-400 font-monoGitHubspan
+                            a href=httpsgithub.comsamad-ai00 target=_blank rel=noopener noreferrer class=block font-semibold text-white hovertext-emerald-400 transition-colors text-sm truncategithub.comsamad-ai00a
+                        div
+                    div
+                div
+
+                !-- Contact Form --
+                div class=lgcol-span-7
+                    div class=glass-card rounded-2xl p-8 h-full
+                        form id=contact-form onsubmit=handleFormSubmit(event) class=space-y-5
+                            div
+                                label class=block text-xs font-mono text-slate-300 mb-2YOUR NAMElabel
+                                input type=text required class=w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focusoutline-none focusborder-emerald-500 transition-colors placeholder=Enter your name
+                            div
+                            div
+                                label class=block text-xs font-mono text-slate-300 mb-2YOUR EMAILlabel
+                                input type=email required class=w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focusoutline-none focusborder-emerald-500 transition-colors placeholder=you@company.com
+                            div
+                            div
+                                label class=block text-xs font-mono text-slate-300 mb-2MESSAGElabel
+                                textarea rows=4 required class=w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focusoutline-none focusborder-emerald-500 transition-colors placeholder=Tell me about your project, engineering role, or collaboration...textarea
+                            div
+                            button type=submit class=w-full py-3.5 rounded-xl bg-emerald-500 hoverbg-emerald-400 text-slate-950 font-bold transition-all shadow-lg shadow-emerald-50025 flex items-center justify-center gap-2
+                                i class=fa-solid fa-paper-planei Send Message
+                            button
+                            div id=form-success class=hidden p-3.5 rounded-xl bg-emerald-50010 border border-emerald-50030 text-center text-emerald-400 text-sm font-medium
+                                i class=fa-solid fa-circle-check mr-1.5i Thank you! Your message has been received. I'll get back to you shortly.
+                            div
+                        form
+                    div
+                div
+            div
+        div
+    section
+
+    !-- Footer --
+    footer class=py-8 bg-slate-950 border-t border-slate-900 text-center text-xs text-slate-400
+        div class=max-w-7xl mx-auto px-4 smpx-6 lgpx-8 flex flex-col smflex-row items-center justify-between gap-4
+            p&copy; 2026 Abdul Samad • Software, AI &amp; Data Engineer. Built for Vercel.p
+            div class=flex items-center space-x-5
+                a href=httpsgithub.comsamad-ai00 target=_blank rel=noopener noreferrer aria-label=GitHub class=hovertext-emerald-400 transition-colorsi class=fa-brands fa-github text-lgia
+                a href=httpslinkedin.cominabdul-samad-425522306 target=_blank rel=noopener noreferrer aria-label=LinkedIn class=hovertext-emerald-400 transition-colorsi class=fa-brands fa-linkedin text-lgia
+                a href=mailtosamadsami566@gmail.com aria-label=Email class=hovertext-emerald-400 transition-colorsi class=fa-regular fa-envelope text-lgia
+            div
+        div
+    footer
+
+    !-- Project Detail Modals --
+    div id=project-modal class=fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-95085 backdrop-blur-md
+        div id=modal-content class=glass-card rounded-2xl max-w-2xl w-full p-6 smp-8 relative border border-emerald-50030 max-h-[90vh] overflow-y-auto shadow-2xl
+            button onclick=closeModal() aria-label=Close Modal class=absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-slate-400 hovertext-white flex items-center justify-center transition-colors
+                i class=fa-solid fa-xmark text-lgi
+            button
+            div id=modal-body
+                !-- Dynamically populated --
+            div
+        div
+    div
+
+    !-- JavaScript for Interactivity --
+    script
+         Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () = {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link = {
+            link.addEventListener('click', () = {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+         Interactive Project Category Filtering
+        function filterProjects(category, btnElement) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn = {
+                btn.classList.remove('bg-emerald-500', 'text-slate-950', 'shadow-lg', 'shadow-emerald-50020');
+                btn.classList.add('glass-card', 'text-slate-300');
+            });
+
+            btnElement.classList.remove('glass-card', 'text-slate-300');
+            btnElement.classList.add('bg-emerald-500', 'text-slate-950', 'shadow-lg', 'shadow-emerald-50020');
+
+            cards.forEach(card = {
+                const categories = card.getAttribute('data-category').split(' ');
+                if (category === 'all'  categories.includes(category)) {
+                    card.classList.remove('hidden');
+                    card.classList.add('flex');
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('flex');
+                }
+            });
+        }
+
+         Detailed Project & Achievement Data for Modals
+        const projectData = {
+            medical {
+                title 3D Medical AI Pipeline (FYP),
+                badge AI & ML • Final Year Project,
+                icon fa-heart-pulse,
+                description An end-to-end multi-modal deep learning pipeline built on a 98GB+ NSCLC Radiogenomics dataset, fusing 3D thoracic CT imaging with clinicalgenomic biomarkers for automated lung tumor segmentation and survivalrisk stratification.,
+                highlights [
+                    Processed and trained on a 98GB+ volumetric NSCLC Radiogenomics CT and genomic dataset.,
+                    Combined nnU-Net for 3D tumor segmentation with Vision Transformers (ViT) and 3D ResNet-18 feature extractors.,
+                    Achieved 0.861 Test AUC and 81.8% classification accuracy on held-out clinical evaluation cohorts.,
+                    Wrapped model inference in a low-latency FastAPI backend for clinical decision-support prototyping.
+                ],
+                tech [Python, PyTorch, nnU-Net, Vision Transformer (ViT), ResNet-18, FastAPI, 98GB Dataset]
+            },
+            fraud {
+                title Fraudulent Payment Detection System,
+                badge AI & ML • Fintech Security,
+                icon fa-shield-halved,
+                description A high-precision financial anomaly detection pipeline designed to detect fraudulent transactions on European credit card datasets characterized by extreme 0.17% class imbalance.,
+                highlights [
+                    Mitigated severe 0.17% minority class imbalance using SMOTE and ADASYN synthetic oversampling strategies.,
+                    Benchmarked and tuned XGBoost and ensemble classifiers to maximize Precision-Recall AUC (PR-AUC) and minimize false alarms.,
+                    Built leakage-free cross-validation pipelines with Scikit-learn for reliable production generalization.
+                ],
+                tech [Python, XGBoost, Scikit-learn, SMOTE, ADASYN, Pandas]
+            },
+            srds {
+                title SRDS Administration Dashboard (srds-dashboard),
+                badge Full-Stack Web & Data Leadership,
+                icon fa-droplet,
+                description Official administration and donor management platform built for SARIOON Red Drop Society (SRDS) to streamline emergency blood donor matching, volunteer onboarding, and operational analytics.,
+                highlights [
+                    Engineered automated donor and volunteer onboarding workflows reducing manual coordination bottlenecks.,
+                    Built full-stack CRUD, blood-group search, and real-time analytics views using Next.js, Prisma, and Supabase.,
+                    Deployed continuously on Vercel with a responsive Tailwind CSS interface for field volunteers and administrators.
+                ],
+                tech [Next.js, Prisma, Supabase, Tailwind CSS, PostgreSQL, Vercel]
+            },
+            vcloud {
+                title Enterprise Client Portals (vCloudTech  Comtanix),
+                badge Full-Stack Web • Enterprise Production,
+                icon fa-globe,
+                description Production feature engineering and architecture across enterprise client and sales portals (salesportal_latest and vcloud_client) at Comtanix.,
+                highlights [
+                    Implemented automated lead scoring modules to prioritize high-value enterprise sales pipelines.,
+                    Refactored complex legacy layout tables into responsive, maintainable Vue.js & Inertia.js components.,
+                    Constructed dual-country address validation and onboarding workflows backed by Laravel, PHP, and SQL.
+                ],
+                tech [Laravel, PHP, Vue.js, Inertia.js, Pinia, SQL, REST APIs]
+            },
+            oosc {
+                title Out-of-School Children (OOSC) Data Analytics,
+                badge Data Analytics • Zakat Foundation,
+                icon fa-graduation-cap,
+                description Data analytics and validation initiative executed during a 3-month Data Analyst Internship at Zakat Foundation (Islamabad) supporting the Out-of-School Children (OOSC) program.,
+                highlights [
+                    Collected, cleaned, deduplicated, and validated large-scale educational enrollment and field survey datasets.,
+                    Ensured data integrity across multi-region stakeholder records to prevent reporting discrepancies.,
+                    Generated actionable analytical reports that directly informed resource allocation and program leadership decisions.
+                ],
+                tech [Data Cleaning, Data Validation, SQL, Excel  Python, Stakeholder Reporting]
+            },
+            yec {
+                title 3 Years Community Leadership & Humanitarian Operations,
+                badge Leadership • YEC  Helping Hand USA,
+                icon fa-hand-holding-heart,
+                description Three-year leadership tenure serving as Event Management Head and Volunteer with YEC (Youth Empowerment Club) and Helping Hand USA.,
+                highlights [
+                    Directed end-to-end event planning, stagevenue logistics, and operational execution for major youth empowerment conferences and community drives.,
+                    Led and mentored cross-functional teams of volunteers under tight deadlines and high-pressure field conditions.,
+                    Coordinated humanitarian relief campaigns and community welfare outreach maximizing stakeholder and donor engagement.
+                ],
+                tech [Event Management (3+ Yrs), Team Leadership, Volunteer Coordination, Humanitarian Logistics, Crisis Handling]
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(projectId) {
+            const data = projectData[projectId];
+            if (!data) return;
+
+            const techHtml = data.tech.map(t = `span class=px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400${t}span`).join('');
+            const highlightsHtml = data.highlights.map(h = `li class=flex items-start gap-2.5i class=fa-solid fa-check text-emerald-400 text-xs mt-1.5ispan${h}spanli`).join('');
+
+            modalBody.innerHTML = `
+                div class=flex items-center gap-3.5 mb-5 pr-8
+                    div class=w-12 h-12 rounded-xl bg-emerald-50010 text-emerald-400 flex items-center justify-center text-xl shrink-0
+                        i class=fa-solid ${data.icon}i
+                    div
+                    div
+                        span class=px-3 py-1 rounded-full bg-emerald-50010 text-emerald-400 font-mono text-xs${data.badge}span
+                        h3 class=text-xl smtext-2xl font-bold text-white mt-1.5${data.title}h3
+                    div
+                div
+                p class=text-slate-300 text-sm leading-relaxed mb-6${data.description}p
+                h4 class=text-white font-semibold text-sm mb-3Key Outcomes &amp; Technical Highlightsh4
+                ul class=space-y-2.5 text-slate-300 text-sm mb-6${highlightsHtml}ul
+                h4 class=text-white font-semibold text-sm mb-3Stack &amp; Competenciesh4
+                div class=flex flex-wrap gap-2${techHtml}div
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        modal.addEventListener('click', (e) = {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) = {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formSuccess = document.getElementById('form-success');
+            formSuccess.classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            setTimeout(() = {
+                formSuccess.classList.add('hidden');
+            }, 6000);
+        }
+    script
+body
+html
