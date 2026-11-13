@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Samad — Software, AI & Data Engineer | Full-Stack Developer</title>
+    <meta name="description" content="Personal portfolio of Abdul Samad — Software, AI & Data Engineer and Full-Stack Developer based in Rawalpindi/Islamabad, Pakistan.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                            950: '#022c22',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        code, .font-mono {
+            font-family: 'Fira Code', monospace;
+        }
+        .glow-effect {
+            box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.25);
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.72);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(16, 185, 129, 0.4);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #10b981;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center font-bold text-slate-950 text-xl shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                    AS
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-white group-hover:text-emerald-400 transition-colors">Abdul Samad</span>
+                    <span class="block text-xs text-emerald-400/85 font-mono tracking-wider">Software, AI &amp; Data Engineer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                <a href="#about" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors rounded-lg hover:bg-slate-900">About</a>
+                <a href="#skills" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors rounded-lg hover:bg-slate-900">Skills</a>
+                <a href="#experience" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors rounded-lg hover:bg-slate-900">Experience</a>
+                <a href="#projects" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors rounded-lg hover:bg-slate-900">Projects</a>
+                <a href="#certifications" class="px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors rounded-lg hover:bg-slate-900">Certifications</a>
+                <a href="#contact" class="ml-4 px-5 py-2.5 text-sm font-semibold text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition-all rounded-xl shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-xs"></i> Let's Talk
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400 focus:outline-none">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-6 py-4 space-y-3 backdrop-blur-xl">
+            <a href="#about" class="block py-2 text-base font-medium text-slate-300 hover:text-emerald-400">About</a>
+            <a href="#skills" class="block py-2 text-base font-medium text-slate-300 hover:text-emerald-400">Skills</a>
+            <a href="#experience" class="block py-2 text-base font-medium text-slate-300 hover:text-emerald-400">Experience</a>
+            <a href="#projects" class="block py-2 text-base font-medium text-slate-300 hover:text-emerald-400">Projects</a>
+            <a href="#certifications" class="block py-2 text-base font-medium text-slate-300 hover:text-emerald-400">Certifications</a>
+            <a href="#contact" class="block text-center py-3 mt-2 text-sm font-semibold text-slate-950 bg-emerald-400 rounded-xl">Let's Talk</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Background Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[420px] bg-emerald-600/10 blur-[140px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-10 right-10 w-72 h-72 bg-teal-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs md:text-sm font-medium animate-pulse-slow">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        Software, AI &amp; Data Engineer | Full-Stack Developer
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                        Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500">Intelligent Systems</span> &amp; Real-World Impact
+                    </h1>
+
+                    <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        I'm <strong class="text-slate-200">Abdul Samad</strong>, a <strong class="text-slate-200">BS in Artificial Intelligence</strong> graduate from <strong class="text-slate-200">Iqra University</strong> (CGPA 3.03/4.0) based in <strong class="text-slate-200">Rawalpindi / Islamabad, Pakistan</strong>—combining enterprise full-stack development, data engineering, 3D medical AI research, and 3+ years of leadership.
+                    </p>
+
+                    <!-- Hero Actions -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects" class="px-7 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition-all shadow-lg shadow-emerald-500/25 flex items-center gap-2.5">
+                            <i class="fa-solid fa-code"></i> Explore Projects
+                        </a>
+                        <a href="#contact" class="px-7 py-3.5 rounded-xl glass-card text-slate-200 hover:text-white font-semibold transition-all border border-slate-700 hover:border-emerald-500/50 flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Key Highlights / Stats -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80 max-w-2xl mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">3+ Yrs</div>
+                            <div class="text-xs text-slate-400 mt-1">Leadership &amp; Events</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">98GB+</div>
+                            <div class="text-xs text-slate-400 mt-1">Medical AI Pipeline</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">3x</div>
+                            <div class="text-xs text-slate-400 mt-1">Azure &amp; Oracle Certs</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">0.861</div>
+                            <div class="text-xs text-slate-400 mt-1">3D Lung AI Test AUC</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Card / Terminal -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-2xl p-6 glow-effect border border-slate-800 relative animate-float">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                            </div>
+                            <span class="text-xs font-mono text-slate-400">abdul-samad@ai-core:~</span>
+                        </div>
+                        <div class="py-4 font-mono text-xs sm:text-sm space-y-2.5 text-slate-300">
+                            <p class="text-emerald-400">$ whoami</p>
+                            <p class="text-slate-200">&gt; Abdul Samad — Software, AI &amp; Data Engineer</p>
+                            <p class="text-emerald-400 mt-3">$ education --status</p>
+                            <p class="text-slate-300">&gt; BS Artificial Intelligence, Iqra University (3.03/4.0)</p>
+                            <p class="text-emerald-400 mt-3">$ active_stack --production</p>
+                            <p class="text-slate-400">['PyTorch', 'nnU-Net', 'XGBoost', 'Laravel', 'Vue.js', 'Next.js', 'Azure AZ-104']</p>
+                            <p class="text-emerald-400 mt-3">$ roles --summary</p>
+                            <p class="text-slate-300">&gt; Comtanix • SRDS Data Head • YEC / Helping Hand USA (3 Yrs)</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                            <span>Rawalpindi / Islamabad, PK</span>
+                            <span class="text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px] animate-ping"></i> Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Education Section -->
+    <section id="about" class="py-20 bg-slate-900/40 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 font-mono text-sm tracking-wider uppercase">Background &amp; Education</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">About Me</h2>
+                <div class="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Profile & Education Card -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div class="glass-card rounded-2xl p-6 sm:p-7 relative overflow-hidden group h-full flex flex-col justify-between">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/25 transition-all"></div>
+                        <div class="space-y-4 relative z-10">
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-user-astronaut text-emerald-400"></i> Engineering &amp; Leadership Profile
+                            </h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                I bridge deep learning, enterprise web development, and high-stakes operational leadership. From architecting full-stack client portals and data pipelines at <strong class="text-white">Comtanix</strong> and validating nationwide educational data at <strong class="text-white">Zakat Foundation</strong>, to leading 3 years of youth and humanitarian operations with <strong class="text-white">YEC / Helping Hand USA</strong>, I deliver systems and milestones built for lasting impact.
+                            </p>
+
+                            <!-- Education Highlight Box -->
+                            <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 mt-4">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider">Education</span>
+                                    <span class="text-xs font-mono text-slate-400">2022 – 2026</span>
+                                </div>
+                                <h4 class="font-bold text-white text-base">BS in Artificial Intelligence</h4>
+                                <p class="text-slate-300 text-xs mt-0.5">Iqra University — Islamabad, Pakistan</p>
+                                <div class="mt-2 inline-block px-2.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs">
+                                    CGPA: 3.03 / 4.0
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-5 mt-5 border-t border-slate-800 grid grid-cols-2 gap-3 text-xs font-mono text-slate-300 relative z-10">
+                            <div><strong class="text-emerald-400">Location:</strong> Rawalpindi / Islamabad</div>
+                            <div><strong class="text-emerald-400">Focus:</strong> AI, Data &amp; Full-Stack</div>
+                            <div><strong class="text-emerald-400">Leadership:</strong> 3+ Years Event Head</div>
+                            <div><strong class="text-emerald-400">Certs:</strong> 2x Azure, 1x Oracle</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Pillars Grid -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-card rounded-xl p-6 hover:border-emerald-500/40 transition-all">
+                        <div class="w-11 h-11 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="font-bold text-white mb-2">3D Medical AI &amp; Machine Learning</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Engineered a 98GB TCIA NSCLC Radiogenomics 3D lung cancer prognosis pipeline (nnU-Net, ViT, ResNet-18) achieving 0.861 Test AUC, plus SMOTE/XGBoost fraud classifiers.</p>
+                    </div>
+
+                    <div class="glass-card rounded-xl p-6 hover:border-emerald-500/40 transition-all">
+                        <div class="w-11 h-11 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h4 class="font-bold text-white mb-2">Enterprise Full-Stack Systems</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Building production features for enterprise client portals using Laravel, PHP, Vue.js, Inertia.js, and SQL, alongside Next.js, Prisma, and Supabase dashboards on Vercel.</p>
+                    </div>
+
+                    <div class="glass-card rounded-xl p-6 hover:border-emerald-500/40 transition-all">
+                        <div class="w-11 h-11 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h4 class="font-bold text-white mb-2">Data Engineering &amp; Analytics</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">Cleaned, validated, and analyzed large-scale Out-of-School Children (OOSC) educational datasets at Zakat Foundation and automated donor pipelines at SRDS.</p>
+                    </div>
+
+                    <div class="glass-card rounded-xl p-6 hover:border-emerald-500/40 transition-all">
+                        <div class="w-11 h-11 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h4 class="font-bold text-white mb-2">Leadership &amp; Life Milestones</h4>
+                        <p class="text-slate-400 text-xs leading-relaxed">3 years as Event Management Head &amp; Volunteer at YEC / Helping Hand USA, verified student fee fundraising campaigns, and self-funded custom home construction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies Section -->
+    <section id="skills" class="py-20 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 font-mono text-sm tracking-wider uppercase">Technical Arsenal</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Core Competencies</h2>
+                <div class="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- AI & Data Science -->
+                <div class="glass-card rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">AI &amp; Data Science</h3>
+                            <span class="text-xs text-slate-400 font-mono">Deep Learning &amp; Analytics</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Python</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">PyTorch</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">TensorFlow</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">nnU-Net</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Vision Transformers</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">XGBoost</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">SMOTE / ADASYN</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Computer Vision</span>
+                    </div>
+                </div>
+
+                <!-- Full-Stack Development -->
+                <div class="glass-card rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">Full-Stack Development</h3>
+                            <span class="text-xs text-slate-400 font-mono">Enterprise Web &amp; APIs</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Laravel</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">PHP</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Vue.js</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Inertia.js</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Next.js</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">FastAPI</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">REST APIs</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">SQL / Prisma / Supabase</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="glass-card rounded-2xl p-6">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white text-lg">Cloud &amp; DevOps</h3>
+                            <span class="text-xs text-slate-400 font-mono">Infrastructure &amp; Delivery</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Microsoft Azure (AZ-104)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Docker</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Git &amp; GitHub</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Vercel CI/CD</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Linux &amp; Bash</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">Team Leadership</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience & Leadership Timeline -->
+    <section id="experience" class="py-20 bg-slate-900/40 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 font-mono text-sm tracking-wider uppercase">Career &amp; Community Impact</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Professional Experience &amp; Leadership</h2>
+                <div class="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- 1. Comtanix -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 relative border-l-4 border-l-emerald-500">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Software, AI &amp; Data Engineer</h3>
+                            <div class="flex flex-wrap items-center gap-2 mt-1">
+                                <span class="text-emerald-400 font-semibold">Comtanix</span>
+                                <span class="text-slate-500">•</span>
+                                <span class="text-slate-400 text-xs font-mono">Rawalpindi, Pakistan</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1 font-mono">Promoted from Data Analyst &amp; Web Developer Internship</p>
+                        </div>
+                        <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs w-fit shrink-0">May 2026 – Present</span>
+                    </div>
+                    <ul class="space-y-2.5 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-emerald-400 text-xs mt-1.5"></i>
+                            <span>Developing production data engineering pipelines, REST APIs, and scalable backend integrations across enterprise systems.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-emerald-400 text-xs mt-1.5"></i>
+                            <span>Building Laravel internal portals and enterprise client portals (<code class="text-emerald-300 text-xs">salesportal_latest</code> &amp; <code class="text-emerald-300 text-xs">vcloud_client</code>) with Vue.js, Inertia.js, automated lead scoring modules, and SQL optimizations.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2. Zakat Foundation -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 relative border-l-4 border-l-teal-400">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Data Analyst Intern – OOSC Project</h3>
+                            <div class="flex flex-wrap items-center gap-2 mt-1">
+                                <span class="text-teal-400 font-semibold">Zakat Foundation</span>
+                                <span class="text-slate-500">•</span>
+                                <span class="text-slate-400 text-xs font-mono">Islamabad, Pakistan</span>
+                            </div>
+                        </div>
+                        <span class="inline-block px-3.5 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 font-mono text-xs w-fit shrink-0">3 Months</span>
+                    </div>
+                    <ul class="space-y-2.5 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-teal-400 text-xs mt-1.5"></i>
+                            <span>Collected, cleaned, validated, and analyzed large-scale <strong>Out-of-School Children (OOSC)</strong> educational datasets across multiple regions.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-teal-400 text-xs mt-1.5"></i>
+                            <span>Standardized stakeholder records and generated executive analytical reports to guide educational outreach and enrollment programs.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 3. YEC / Helping Hand USA -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 relative border-l-4 border-l-amber-400">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Event Management Head &amp; Volunteer</h3>
+                            <div class="flex flex-wrap items-center gap-2 mt-1">
+                                <span class="text-amber-400 font-semibold">YEC / Helping Hand USA</span>
+                                <span class="text-slate-500">•</span>
+                                <span class="text-slate-400 text-xs font-mono">Leadership &amp; Humanitarian Outreach</span>
+                            </div>
+                        </div>
+                        <span class="inline-block px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 font-mono text-xs w-fit shrink-0">3 Years</span>
+                    </div>
+                    <ul class="space-y-2.5 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-amber-400 text-xs mt-1.5"></i>
+                            <span>Led end-to-end event planning, community outreach, logistics, and volunteer coordination across multi-year humanitarian and youth initiatives.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-amber-400 text-xs mt-1.5"></i>
+                            <span>Directed cross-functional student and volunteer teams during large-scale relief drives, seminars, and welfare campaigns under tight deadlines.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. SARIOON Red Drop Society (SRDS) -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 relative border-l-4 border-l-rose-400">
+                    <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Data Management Team Leader</h3>
+                            <div class="flex flex-wrap items-center gap-2 mt-1">
+                                <span class="text-rose-400 font-semibold">SARIOON Red Drop Society (SRDS)</span>
+                                <span class="text-slate-500">•</span>
+                                <span class="text-slate-400 text-xs font-mono">Data Systems &amp; Platform Architecture</span>
+                            </div>
+                        </div>
+                        <span class="inline-block px-3.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 font-mono text-xs w-fit shrink-0">Team Leader</span>
+                    </div>
+                    <ul class="space-y-2.5 text-slate-300 text-sm">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-rose-400 text-xs mt-1.5"></i>
+                            <span>Architected automated data capture frameworks and structured volunteer/donor onboarding forms to streamline emergency blood donation matching.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-rose-400 text-xs mt-1.5"></i>
+                            <span>Designed and deployed the <code class="text-rose-300 text-xs">srds-dashboard</code> admin platform on Vercel using <strong>Next.js, Prisma, Supabase, and Tailwind CSS</strong>.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Achievements Section with Category Filtering -->
+    <section id="projects" class="py-20 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-emerald-400 font-mono text-sm tracking-wider uppercase">Portfolio &amp; Life Milestones</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Key Projects &amp; Achievements</h2>
+                <div class="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-400 text-sm mt-4">Filter by category or click any card to explore full technical architecture, metrics, and life achievements.</p>
+            </div>
+
+            <!-- Interactive Category Filter Tabs -->
+            <div id="filter-buttons" class="flex flex-wrap items-center justify-center gap-2.5 mb-12">
+                <button onclick="filterProjects('all', this)" class="filter-btn active px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20 transition-all">
+                    All (6)
+                </button>
+                <button onclick="filterProjects('ai', this)" class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold glass-card text-slate-300 hover:text-white transition-all">
+                    AI &amp; ML
+                </button>
+                <button onclick="filterProjects('fullstack', this)" class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold glass-card text-slate-300 hover:text-white transition-all">
+                    Full-Stack Web
+                </button>
+                <button onclick="filterProjects('data-leadership', this)" class="filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold glass-card text-slate-300 hover:text-white transition-all">
+                    Data &amp; Leadership
+                </button>
+            </div>
+
+            <!-- Project Grid -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                
+                <!-- 1. 3D Medical AI Pipeline (FYP) -->
+                <div data-category="ai" class="project-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-emerald-500/50 transition-all cursor-pointer" onclick="openModal('medical')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-xs">AI &amp; ML • FYP</span>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">3D Medical AI Pipeline</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            Lung cancer prognosis on the <strong>98GB TCIA NSCLC Radiogenomics</strong> dataset using nnU-Net, ResNet-18, ViT, and 3D CNNs (<strong>Test AUC 0.861, Acc 81.8%</strong>).
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">nnU-Net</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">ViT</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">ResNet-18</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">3D CNNs</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">FastAPI</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400">
+                        <span>View Case Study</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 2. Fraudulent Payment Detection System -->
+                <div data-category="ai" class="project-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-emerald-500/50 transition-all cursor-pointer" onclick="openModal('fraud')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-xs">AI &amp; ML • Fintech</span>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Fraudulent Payment Detection System</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            ML classifier on European credit card transactions addressing extreme <strong>0.17% class imbalance</strong> via SMOTE/ADASYN and tuned XGBoost/Random Forest.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">XGBoost</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Random Forest</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">SMOTE / ADASYN</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">PR-AUC</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400">
+                        <span>View Case Study</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 3. SRDS Dashboard -->
+                <div data-category="fullstack data-leadership" class="project-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-emerald-500/50 transition-all cursor-pointer" onclick="openModal('srds')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 font-mono text-xs">Full-Stack • Vercel Live</span>
+                            <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-droplet"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">SRDS Dashboard</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            Production web administration platform (<code class="text-emerald-300 text-xs">srds-dashboard</code>) deployed on Vercel for blood donor and volunteer registry management.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Next.js</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Prisma</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Supabase</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400">
+                        <span>View Case Study</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 4. vCloudTech Enterprise Client Portals -->
+                <div data-category="fullstack" class="project-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-emerald-500/50 transition-all cursor-pointer" onclick="openModal('vcloud')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 font-mono text-xs">Full-Stack • Enterprise</span>
+                            <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">vCloudTech Enterprise Client Portals</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            Refactored layout tables, built automated lead scoring modules, and engineered dual-country address forms across <code class="text-emerald-300 text-xs">salesportal_latest</code> &amp; <code class="text-emerald-300 text-xs">vcloud_client</code>.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Laravel</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">PHP</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Vue.js</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Inertia.js</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">SQL</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400">
+                        <span>View Case Study</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 5. YEC & Helping Hand USA Community Leadership -->
+                <div data-category="data-leadership" class="project-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-emerald-500/50 transition-all cursor-pointer" onclick="openModal('yec')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 font-mono text-xs">Leadership • 3 Years</span>
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">YEC &amp; Helping Hand USA Leadership</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            Directed large-scale community welfare events, fundraising drives, and volunteer operations over a dedicated <strong>3-year leadership tenure</strong>.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Event Head</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Fundraising</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Logistics</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Outreach</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400">
+                        <span>View Achievement Details</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- 6. Self-Funded Custom House & Community Welfare Initiatives -->
+                <div data-category="data-leadership" class="project-card glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group hover:border-emerald-500/50 transition-all cursor-pointer" onclick="openModal('milestones')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 font-mono text-xs">Life Milestone &amp; Welfare</span>
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Self-Funded Custom Home &amp; Welfare Drives</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            Completed a self-funded custom home build alongside full-time engineering work, plus organized verified student fee fundraising campaigns.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-6">
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Self-Funded Build</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Student Aid</span>
+                            <span class="px-2.5 py-1 rounded bg-slate-900 text-xs font-mono text-emerald-400">Execution</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-medium text-emerald-400">
+                        <span>View Achievement Details</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-slate-900/40 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 font-mono text-sm tracking-wider uppercase">Verified Credentials</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Certifications</h2>
+                <div class="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Cert 1: Azure AZ-104 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-brands fa-microsoft"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-blue-400 font-mono">Microsoft Certified</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Azure Administrator Associate (AZ-104)</h3>
+                            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                                Certified expertise in implementing, managing, and monitoring identity, governance, storage, compute, and virtual networks in Microsoft Azure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Azure AI Fundamentals -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-sky-400 font-mono">Microsoft Certified</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Azure AI Fundamentals</h3>
+                            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                                Foundational mastery of machine learning pipelines, computer vision, natural language processing, and generative AI workloads on Azure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Oracle Agentic AI -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-rose-400 font-mono">Oracle Certified</span>
+                            <h3 class="text-lg font-bold text-white mt-1">Foundations Associate – Agentic AI</h3>
+                            <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                                Certified in designing autonomous AI agent workflows, tool-calling architectures, and intelligent enterprise automation pipelines.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 border-t border-slate-800/60 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-emerald-600/10 blur-[150px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emerald-400 font-mono text-sm tracking-wider uppercase">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Let's Connect</h2>
+                <div class="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-slate-400 text-sm mt-4">Open to Software, AI &amp; Data Engineering roles, full-stack consulting, and collaborative ventures.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 max-w-5xl mx-auto">
+                <!-- Contact Info Cards -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="text-xs text-slate-400 font-mono">Email</span>
+                            <a href="mailto:samadsami566@gmail.com" class="block font-semibold text-white hover:text-emerald-400 transition-colors text-sm truncate">samadsami566@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 font-mono">Phone / WhatsApp</span>
+                            <a href="tel:+923149940582" class="block font-semibold text-white hover:text-emerald-400 transition-colors text-sm">+92 314 9940582</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="text-xs text-slate-400 font-mono">LinkedIn</span>
+                            <a href="https://linkedin.com/in/abdul-samad-425522306" target="_blank" rel="noopener noreferrer" class="block font-semibold text-white hover:text-emerald-400 transition-colors text-sm truncate">linkedin.com/in/abdul-samad-425522306</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="text-xs text-slate-400 font-mono">GitHub</span>
+                            <a href="https://github.com/samad-ai00" target="_blank" rel="noopener noreferrer" class="block font-semibold text-white hover:text-emerald-400 transition-colors text-sm truncate">github.com/samad-ai00</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-2xl p-8 h-full">
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                            <div>
+                                <label class="block text-xs font-mono text-slate-300 mb-2">YOUR NAME</label>
+                                <input type="text" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-slate-300 mb-2">YOUR EMAIL</label>
+                                <input type="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors" placeholder="you@company.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-slate-300 mb-2">MESSAGE</label>
+                                <textarea rows="4" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 transition-colors" placeholder="Tell me about your project, engineering role, or collaboration..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition-all shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                            <div id="form-success" class="hidden p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-center text-emerald-400 text-sm font-medium">
+                                <i class="fa-solid fa-circle-check mr-1.5"></i> Thank you! Your message has been received. I'll get back to you shortly.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Abdul Samad • Software, AI &amp; Data Engineer. Deployed on Vercel.</p>
+            <div class="flex items-center space-x-5">
+                <a href="https://github.com/samad-ai00" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="https://linkedin.com/in/abdul-samad-425522306" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <a href="mailto:samadsami566@gmail.com" aria-label="Email" class="hover:text-emerald-400 transition-colors"><i class="fa-regular fa-envelope text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study & Achievement Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+        <div id="modal-content" class="glass-card rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative border border-emerald-500/30 max-h-[90vh] overflow-y-auto shadow-2xl">
+            <button onclick="closeModal()" aria-label="Close Modal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modal-body">
+                <!-- Populated via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Category Filter Tabs
+        function filterProjects(category, btnElement) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-emerald-500', 'text-slate-950', 'shadow-lg', 'shadow-emerald-500/20');
+                btn.classList.add('glass-card', 'text-slate-300');
+            });
+
+            btnElement.classList.remove('glass-card', 'text-slate-300');
+            btnElement.classList.add('bg-emerald-500', 'text-slate-950', 'shadow-lg', 'shadow-emerald-500/20');
+
+            cards.forEach(card => {
+                const categories = card.getAttribute('data-category').split(' ');
+                if (category === 'all' || categories.includes(category)) {
+                    card.classList.remove('hidden');
+                    card.classList.add('flex');
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('flex');
+                }
+            });
+        }
+
+        // Case Study & Achievement Modal Content
+        const projectData = {
+            medical: {
+                title: "3D Medical AI Pipeline (FYP)",
+                badge: "AI & ML • Final Year Project",
+                icon: "fa-heart-pulse",
+                description: "End-to-end lung cancer prognosis pipeline built on the 98GB TCIA NSCLC Radiogenomics dataset, combining volumetric 3D CT segmentation with deep vision transformers and CNN architectures.",
+                highlights: [
+                    "Processed and trained on the 98GB TCIA NSCLC Radiogenomics volumetric CT & clinical dataset.",
+                    "Integrated nnU-Net for 3D tumor segmentation alongside ResNet-18, Vision Transformers (ViT), and 3D CNN backbones.",
+                    "Achieved 0.861 Test AUC and 81.8% accuracy on held-out clinical test cohorts.",
+                    "Deployed model inference via a FastAPI service for real-time clinical prognosis evaluation."
+                ],
+                tech: ["Python", "PyTorch", "nnU-Net", "Vision Transformers (ViT)", "ResNet-18", "3D CNNs", "FastAPI"]
+            },
+            fraud: {
+                title: "Fraudulent Payment Detection System",
+                badge: "AI & ML • Financial Anomaly Detection",
+                icon: "fa-shield-halved",
+                description: "High-precision machine learning classification pipeline built on the European credit card transactions dataset to detect fraudulent activity under extreme class imbalance.",
+                highlights: [
+                    "Addressed severe 0.17% fraudulent class imbalance using SMOTE and ADASYN synthetic oversampling techniques.",
+                    "Tuned XGBoost and Random Forest classifiers specifically optimizing for Precision-Recall AUC (PR-AUC) over raw accuracy.",
+                    "Engineered leak-free cross-validation pipelines for reliable real-world transaction screening."
+                ],
+                tech: ["Python", "XGBoost", "Random Forest", "SMOTE", "ADASYN", "Scikit-learn", "PR-AUC"]
+            },
+            srds: {
+                title: "SRDS Dashboard (srds-dashboard)",
+                badge: "Full-Stack Web & Data Leadership • Vercel Live",
+                icon: "fa-droplet",
+                description: "Production web administration platform built and deployed on Vercel for SARIOON Red Drop Society (SRDS) to manage blood donor registries, volunteer onboarding, and emergency response.",
+                highlights: [
+                    "Built automated donor and volunteer onboarding forms connected to a centralized relational database.",
+                    "Developed real-time blood group filtering, donor status tracking, and admin analytics views.",
+                    "Deployed on Vercel with Next.js, Prisma, Supabase, and Tailwind CSS for responsive mobile/desktop field access."
+                ],
+                tech: ["Next.js", "Prisma", "Supabase", "Tailwind CSS", "SQL", "Vercel"]
+            },
+            vcloud: {
+                title: "vCloudTech Enterprise Client Portals",
+                badge: "Full-Stack Web • Enterprise Production",
+                icon: "fa-globe",
+                description: "Production engineering and UI/backend refactoring across enterprise sales and client portals (salesportal_latest & vcloud_client) at Comtanix.",
+                highlights: [
+                    "Refactored legacy layout tables into modern, responsive Vue.js and Inertia.js views.",
+                    "Implemented automated lead scoring modules to streamline sales pipeline qualification.",
+                    "Engineered dual-country address validation and onboarding workflows backed by Laravel, PHP, and SQL."
+                ],
+                tech: ["Laravel", "PHP", "Vue.js", "Inertia.js", "SQL", "REST APIs"]
+            },
+            yec: {
+                title: "YEC & Helping Hand USA Community Leadership",
+                badge: "Leadership • 3 Years Tenure",
+                icon: "fa-hand-holding-heart",
+                description: "Three-year leadership commitment serving as Event Management Head and Volunteer with YEC and Helping Hand USA.",
+                highlights: [
+                    "Directed large-scale community welfare events, youth empowerment seminars, and humanitarian fundraising drives.",
+                    "Managed end-to-end event logistics, venue coordination, and cross-functional volunteer teams.",
+                    "Sustained consistent community outreach and relief execution across 3 years alongside academic and engineering commitments."
+                ],
+                tech: ["Event Management (3 Yrs)", "Fundraising Drives", "Volunteer Operations", "Community Outreach"]
+            },
+            milestones: {
+                title: "Self-Funded Custom House & Community Welfare Initiatives",
+                badge: "Life Milestone & Social Impact",
+                icon: "fa-house-chimney",
+                description: "Major personal and social milestones achieved through disciplined financial planning, engineering execution, and community trust.",
+                highlights: [
+                    "Completed a self-funded custom home construction project while balancing full-time software and AI engineering responsibilities.",
+                    "Organized and managed verified student fee fundraising campaigns, ensuring transparent aid delivery to deserving students.",
+                    "Demonstrated end-to-end project management, budgeting, and accountability across both personal and community initiatives."
+                ],
+                tech: ["Project Execution", "Self-Funded Construction", "Verified Student Aid", "Resource Management"]
+            }
+        };
+
+        const modal = document.getElementById('project-modal');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(projectId) {
+            const data = projectData[projectId];
+            if (!data) return;
+
+            const techHtml = data.tech.map(t => `<span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-xs font-mono text-emerald-400">${t}</span>`).join('');
+            const highlightsHtml = data.highlights.map(h => `<li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-emerald-400 text-xs mt-1.5"></i><span>${h}</span></li>`).join('');
+
+            modalBody.innerHTML = `
+                <div class="flex items-center gap-3.5 mb-5 pr-8">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid ${data.icon}"></i>
+                    </div>
+                    <div>
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-xs">${data.badge}</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mt-1.5">${data.title}</h3>
+                    </div>
+                </div>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">${data.description}</p>
+                <h4 class="text-white font-semibold text-sm mb-3">Key Outcomes &amp; Highlights:</h4>
+                <ul class="space-y-2.5 text-slate-300 text-sm mb-6">${highlightsHtml}</ul>
+                <h4 class="text-white font-semibold text-sm mb-3">Technologies &amp; Skills:</h4>
+                <div class="flex flex-wrap gap-2">${techHtml}</div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formSuccess = document.getElementById('form-success');
+            formSuccess.classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
